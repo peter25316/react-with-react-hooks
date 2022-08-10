@@ -13,6 +13,10 @@ const AddUser = (props) => {
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0)
       return;
     if (+enteredAge < 1) return;
+    
+    // Use onAddUser property of props (which calls addUserHandler function of App component)
+    props.onAddUser(enteredUsername, enteredAge);
+
     // Reset inputs (by feeding current States to <input> using "value")
     setEnteredUsername("");
     setEnteredAge("");
