@@ -12,6 +12,7 @@ const AddUser = (props) => {
     event.preventDefault();
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0)
       return;
+    // Forcing enteredAge to be a number by using "+"
     if (+enteredAge < 1) return;
     
     // Use onAddUser property of props (which calls addUserHandler function of App component)
